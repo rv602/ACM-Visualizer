@@ -1,11 +1,29 @@
-import logo from './logo.svg';
+import data from './json/dummyData.json';
 import './App.css';
+import Cards from './components/Cards';
+// import { Navbar } from 'react-bootstrap';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
+
+  // console.clear();
+  console.log(data);
+
   return (
-    <div className="App">
-      <h1>Data Visualliser</h1>
-    </div>
+    <>
+      <div className="App">
+      {/* <NavigationBar /> */}
+      </div>
+      <div className="projects">
+        {data.map((project, index) => {
+          return (
+            <div className="project" key={index}>
+                <Cards srNo={project.srNo} state={project.State} projectTitle={project.projectTitle} financialYear={project.financialYear} projectCategory={project.projectCategory} sector={project.sector} projectStatus={project.projectStatus} pacAmt={project.pacAmt} yrApprovedAmt={project.yrApprovedAmt} fundReleasedToActivity={project.fundReleasedToActivity} />
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
