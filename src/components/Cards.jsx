@@ -7,8 +7,16 @@ function Cards(props) {
     <Card style={{ width: '18rem' }}>
       {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
       <Card.Body>
-        <Card.Title>{props.projectTitle}</Card.Title>
-        <Card.Text>{props.financialYear}</Card.Text>
+        {/* <Card.Title style={{ fontWeight: 'bolder', textAlign: 'center' }}>{props.projectTitle}</Card.Title>
+        <Card.Text style={{ textAlign: 'center' }}>{props.financialYear}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.projectCategory}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.sector}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.projectStatus}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.pacAmt}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.yrApprovedAmt}</Card.Text>
+        <Card.Text style={{ textAlign: 'center' }}>{props.fundReleasedToActivity}</Card.Text> */}
+        <Card.Title style={{ fontWeight: 'bolder', textAlign: 'center' }}>{props.projectTitle}</Card.Title>
+        <Card.Text style={{ fontWeight: 'bolder', textAlign: 'center', border: '2px solid green' }}>{props.financialYear}</Card.Text>
         <Card.Text>{props.projectCategory}</Card.Text>
         <Card.Text>{props.sector}</Card.Text>
         <Card.Text>{props.projectStatus}</Card.Text>
